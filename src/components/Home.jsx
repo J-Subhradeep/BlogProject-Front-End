@@ -1,4 +1,5 @@
 import React from "react";
+import Writeup from "./Writeup";
 
 const Home = () => {
   return (
@@ -79,75 +80,8 @@ const Home = () => {
               <a href="#">More</a>
             </li>
           </ul>
-          <div className="write-up">
-            <p className="post">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-              error soluta cupiditate. Voluptas, quam veniam, deleniti aperiam
-              nisi libero repellendus commodi tenetur esse voluptatibus
-              quibusdam error omnis rerum quod necessitatibus.
-            </p>
-            <hr />
-            <div className="react-comment">
-              <div className="react">
-                <i className="fas fa-heart"></i>
-              </div>
-              <div className="comment">
-                <i className="far fa-comment-dots"></i>
-              </div>
-            </div>
-          </div>
-          <div className="write-up">
-            <p className="post">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-              error soluta cupiditate. Voluptas, quam veniam, deleniti aperiam
-              nisi libero repellendus commodi tenetur esse voluptatibus
-              quibusdam error omnis rerum quod necessitatibus.
-            </p>
-            <hr />
-            <div className="react-comment">
-              <div className="react">
-                <i className="fas fa-heart"></i>
-              </div>
-              |
-              <div className="comment">
-                <i className="far fa-comment-dots"></i>
-              </div>
-            </div>
-          </div>
-          <div className="write-up">
-            <p className="post">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-              error soluta cupiditate. Voluptas, quam veniam, deleniti aperiam
-              nisi libero repellendus commodi tenetur esse voluptatibus
-              quibusdam error omnis rerum quod necessitatibus.
-            </p>
-            <hr />
-            <div className="react-comment">
-              <div className="react">
-                <i className="fas fa-heart"></i>
-              </div>
-              <div className="comment">
-                <i className="far fa-comment-dots"></i>
-              </div>
-            </div>
-          </div>
-          <div className="write-up">
-            <p className="post">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-              error soluta cupiditate. Voluptas, quam veniam, deleniti aperiam
-              nisi libero repellendus commodi tenetur esse voluptatibus
-              quibusdam error omnis rerum quod necessitatibus.
-            </p>
-            <hr />
-            <div className="react-comment">
-              <div className="react">
-                <i className="fas fa-heart"></i>
-              </div>
-              <div className="comment">
-                <i className="far fa-comment-dots"></i>
-              </div>
-            </div>
-          </div>
+
+          <Writeup description="The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more" />
         </div>
 
         <div className="col-three">

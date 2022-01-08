@@ -13,6 +13,8 @@ const Navbar = () => {
   useEffect(() => {
     setTimeout(() => {
       console.log(document.getElementsByClassName("splash"));
+      let splash = document.getElementsByClassName("splash")[0];
+      splash.classList.add("display-none");
     }, 2000);
   }, []);
   return (
@@ -23,7 +25,9 @@ const Navbar = () => {
           console.log(e.target);
         }}
       >
-        <h1 className="fade-in">ThoughtBots</h1>
+        <h1 className="fade-in">ThoughtBots</h1>To join the video meeting, click
+        this link: https://meet.google.com/tez-fbcq-aji Otherwise, to join by
+        phone, dial +1 316-536-0718 and enter this PIN: 744 190 475#
       </div>
       <nav>
         <a href="#" className="logo">
@@ -56,7 +60,13 @@ const Navbar = () => {
               <a href="#">Signup</a>
             </li>
             <li>
-              <i className="fas fa-moon" id="themeIcon"></i>
+              <i
+                className="fas fa-moon"
+                id="themeIcon"
+                onClick={() => {
+                  document.body.classList.toggle("dark-theme");
+                }}
+              ></i>
             </li>
           </ul>
         </div>
