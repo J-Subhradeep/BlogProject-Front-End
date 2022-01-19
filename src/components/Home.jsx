@@ -1,9 +1,10 @@
 import React from "react";
 import Writeup from "./Writeup";
-
+import Navbar from "./Navbar";
 const Home = () => {
   return (
     <>
+      <Navbar />
       <div className="three-cols">
         <div className="col-one">
           <div className="profile-div">

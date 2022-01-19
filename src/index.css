@@ -1,13 +1,645 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#login_main {
+  background-color: #fff;
+  /* height: 65vh; */
+  min-height: 50vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 2rem;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  border: 3px solid silver;
+  /* border: 5px solid transparent; */
 }
+
+.login_section {
+  padding: 1rem;
+  background-color: white;
+  min-width: 20rem;
+  min-height: 40vh;
+  border-radius: 2rem;
+}
+
+.login_section h1 {
+  font-family: "Epilogue", sans-serif;
+  text-align: center;
+  padding: 1rem 1rem 1rem;
+  color: red;
+  /* border-bottom: 2px solid silver; */
+}
+#login__icon i {
+  color: red;
+}
+#login__icon {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ============================== */
+.login_fields {
+  position: relative;
+  height: 35px;
+  /* border-bottom: 2px solid #adadad; */
+  margin: 2.5rem 1rem 0 1rem;
+}
+
+.login_fields input {
+  width: 100%;
+  outline: none;
+  border: none;
+  background: none;
+  font-family: "Epilogue", sans-serif;
+  font-size: 13px;
+  color: gray;
+  height: 27px;
+  border-bottom: 2px solid #adadad;
+}
+
+.login_fields label {
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  transform: translateY(-50%);
+  color: #adadad;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.login_fields span::before {
+  content: "";
+  background: red;
+  position: absolute;
+  top: 27.5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  transition: 0.5s;
+}
+
+.login_fields input:focus ~ label,
+.login_fields input:valid ~ label {
+  top: -10px;
+  color: red;
+  border-bottom: none;
+  /* font-weight: 900; */
+}
+
+.login_fields input:focus ~ span::before,
+.login_fields input:focus ~ span::before {
+  width: 100%;
+}
+
+.login_fields label:hover {
+  top: -7px;
+  cursor: default;
+  border-bottom: none;
+}
+
+/* ============================ */
+
+.forgot_ps_login {
+  padding: 0.2rem 1rem 0;
+}
+
+.forgot_ps_login a {
+  text-decoration: none;
+  color: #adadad;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.forgot_ps_login a:hover {
+  color: red;
+  font-weight: 600;
+}
+
+.login_btn_section {
+  text-align: center;
+  padding: 2rem 0.3rem;
+  border-bottom: 2px solid silver;
+}
+
+#submit_login {
+  width: 150px;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 0.5rem 0.8rem;
+  outline: none;
+  background: #fff;
+  color: red;
+  border-radius: 0.5rem;
+  border: 2px solid red;
+}
+
+#submit_login:hover {
+  color: white;
+  background-color: red;
+  cursor: pointer;
+}
+
+.signupfromlogin_link {
+  position: relative;
+  text-align: center;
+  padding: 0.5rem 1rem 0rem;
+}
+
+.signupfromlogin_link span {
+  float: left;
+  padding: 0 0.8rem 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #adadad;
+  font-weight: 600;
+}
+
+.signupfromlogin_link a {
+  /* float: right; */
+  position: absolute;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+  top: 6px;
+  right: 45px;
+  color: #adadad;
+  /* padding: 0 0.9rem 1rem 0; */
+}
+
+.signupfromlogin_link a:hover {
+  color: red;
+}
+
+@media (max-width: 700px) {
+  #login_main {
+    border: none;
+  }
+
+  .login_section h1 {
+    border-bottom: none;
+  }
+
+  .login_btn_section {
+    border-bottom: none;
+  }
+
+  #login_main {
+    width: 75%;
+  }
+}
+
+@media (max-width: 445px) {
+  #login_main {
+    width: 100%;
+  }
+}
+/* @media (max-width : 350px) {
+
+  #login_main {
+      width: 90%;
+  }
+} */
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>login end>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+#sign_up_main_div {
+  width: 100vw;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sign_up_div {
+  margin: 5rem 0;
+  width: 20rem;
+  height: 27rem;
+  border: 2px solid silver;
+  border-radius: 2rem;
+  padding: 1rem;
+}
+
+#icon_div {
+  padding: 1rem 0;
+  color: red;
+  text-align: center;
+  /* border-bottom: 2px solid silver; */
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+#form_sign_up {
+  margin: 1rem 0;
+}
+
+.star {
+  position: relative;
+  border-bottom: 2px solid silver;
+  margin: 1.5rem 1rem;
+}
+
+.star input {
+  outline: none;
+  border: none;
+  width: 100%;
+  background: none;
+  font-size: 13px;
+  color: gray;
+  font-weight: 800;
+  height: 35px;
+  font-family: "Epilogue", sans-serif;
+}
+
+.star label {
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  font-weight: 600;
+  color: #adadad;
+  font-size: 13px;
+}
+
+.star span::before {
+  content: "";
+  background: red;
+  width: 0%;
+  transition: 0.5s;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  height: 2px;
+}
+
+.star input:focus ~ label,
+.star input:valid ~ label {
+  top: -5px;
+  color: red;
+  border-bottom: none;
+  font-weight: 900;
+}
+
+.star input:focus ~ span::before {
+  width: 100%;
+}
+
+.star label:hover {
+  top: -5px;
+  border-bottom: none;
+  cursor: default;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+#submit_sign_up {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+#submit_sign_up input {
+  border: 2px solid red;
+  outline: none;
+  background: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  color: red;
+  font-weight: 800;
+  width: 150px;
+}
+
+#submit_sign_up input:hover {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+
+#more_help {
+  border-top: 2px solid silver;
+  margin-top: 1rem;
+  position: relative;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+#more_help span {
+  font-family: "Inter", sans-serif;
+  color: #adadad;
+  position: absolute;
+  left: 20px;
+  top: -5px;
+  padding: 0.6rem;
+  font-size: 12px;
+}
+
+#more_help a {
+  position: absolute;
+  top: 5px;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: #adadad;
+  right: 55px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+#more_help a:hover {
+  color: red;
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .star span::before {
+    top: 39px;
+  }
+
+  #sign_up_div {
+    margin: 1rem 0;
+    width: 75%;
+    border: none;
+  }
+
+  #icon_div {
+    border-bottom: none;
+  }
+
+  #submit_sign_up {
+    margin: 3rem;
+  }
+
+  #more_help {
+    height: 3rem;
+    margin: 15px 0;
+    border-top: none;
+  }
+
+  .star input {
+    height: 40px;
+  }
+
+  .xtra {
+    height: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  #sign_up_div {
+    width: 100%;
+  }
+
+  #sign_up_main_div {
+    padding: 3px;
+  }
+
+  .xtra {
+    height: 10px;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>sign up end>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+#main__mid_div {
+  width: 65vw;
+  margin-top: 3rem;
+  font-family: montserrat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem 2rem 1rem 1.5rem;
+  background-color: white;
+  border-radius: 2rem;
+  border: 2px solid silver;
+}
+
+#publish__post {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0rem 0rem;
+}
+
+#publish__btn {
+  width: 100px;
+  font-family: "Inter", sans-serif;
+  outline: none;
+  border-radius: 2rem;
+  padding: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: red;
+  border: none;
+  /* margin: 5px 0; */
+  height: 2.7rem;
+}
+
+#publish__btn:hover {
+  color: red;
+  background-color: white;
+  border: 2px solid red;
+  cursor: pointer;
+}
+
+/* ================================================== */
+.top2fields {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  width: 30%;
+  margin: 1.5rem 0.3rem;
+}
+
+#mid__div_title {
+  width: 80%;
+}
+
+.top2fields input {
+  width: 100%;
+  outline: none;
+  font-family: "Epilogue", sans-serif;
+  color: #adadad;
+  border: none;
+  background: none;
+  font-size: 15px;
+  height: 25px;
+}
+
+.top2fields label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 17px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.top2fields label:hover {
+  top: -10px;
+}
+
+.top2fields span::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: red;
+  transition: 0.7s;
+}
+
+.top2fields input:focus ~ label {
+  top: -10px;
+  color: red;
+  font-weight: 600;
+}
+
+.top2fields input:valid ~ label {
+  top: -10px;
+  color: red;
+  font-weight: 600;
+}
+
+.top2fields input:focus ~ span::before {
+  width: 100%;
+}
+
+/* =============================================================== */
+
+#content_space_main {
+  box-sizing: border-box;
+  width: 100%;
+  /* overflow: hidden */
+}
+
+textarea {
+  /* margin-right: 50px; */
+  min-width: 89%;
+  max-width: 96%;
+  height: 100%;
+  resize: none;
+  outline: none;
+  border: 2px solid #adadad;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  font-weight: 600;
+  padding: 1rem;
+  font-size: 16px;
+  font-family: "Epilogue", sans-serif;
+}
+
+textarea:focus {
+  border: 2px solid red;
+}
+
+#main_div {
+  position: relative;
+}
+
+#user__pic {
+  text-align: center;
+  padding: 1rem 2rem 0;
+  background: white;
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #adadad;
+  border-radius: 2rem;
+  font-size: 4rem;
+  z-index: 2;
+}
+
+#__blog_user_logo:hover {
+  cursor: pointer;
+}
+
+#user__name {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 700px) {
+  .top2fields label {
+    font-size: 13px;
+  }
+
+  .top2fields span::before {
+    height: 2px;
+  }
+
+  #main__mid_div {
+    border: none;
+    height: 70vh;
+    width: 80vw;
+    margin: 1rem 1rem 1rem 0rem;
+  }
+
+  #user__pic {
+    top: -85px;
+  }
+
+  textarea {
+    font-size: 14px;
+    margin: auto;
+    background-color: silver;
+    width: 100%;
+  }
+
+  #mid__div_topic,
+  #mid__div_title {
+    width: 100%;
+  }
+
+  #publish__post {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  #mid__div_topic,
+  #mid__div_title {
+    width: 105%;
+  }
+
+  #main__mid_div {
+    border: none;
+    height: 65vh;
+    width: 75vw;
+    margin: 1rem 1rem 1rem 0rem;
+  }
+
+  textarea {
+    margin: auto;
+    background-color: silver;
+    width: 100%;
+  }
+
+  form input ~ label {
+    font-size: 6px;
+  }
+
+  #user__pic {
+    top: -85px;
+  }
+
+  .top2fields label {
+    font-size: 11px;
+  }
+
+  .top2fields span::before {
+    height: 2px;
+  }
+}
+
+@media (min-width: 1200px) {
+  textarea {
+    width: 100%;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>End of post  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */

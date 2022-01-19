@@ -1,15 +1,7 @@
 import React, { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  // useEffect(() => {
-  //   const splash = document.querySelector(".splash");
-  //   document.addEventListener("load", () => {
-  //     setTimeout(() => {
-  //       splash.classList.add("display-none");
-  //       console.log("hello");
-  //     }, 2000);
-  //   });
-  // }, []);
   useEffect(() => {
     setTimeout(() => {
       console.log(document.getElementsByClassName("splash"));
@@ -43,21 +35,20 @@ const Navbar = () => {
                 id="search-bar"
                 placeholder="Search here"
               />
-              <a href="#">
-                <i className="fa fa-search" id="search-btn"></i>
-              </a>
+
+              <i className="fa fa-search" id="search-btn"></i>
             </li>
             <li>
-              <a href="#">Home</a>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <a href="#">Post</a>
+              <NavLink to="/post">Post</NavLink>
             </li>
             <li>
-              <a href="#">Login</a>
+              <NavLink to="/login">Login</NavLink>
             </li>
             <li>
-              <a href="#">Signup</a>
+              <NavLink to="/signup">Sign Up</NavLink>
             </li>
             <li>
               <i
